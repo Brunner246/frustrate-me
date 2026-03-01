@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday!</title>
+    <meta name="description" content="A frustrating birthday present game!" />
+  </head>
+  <body>
+    <div id="game-container">
+      <h1 id="title">🎂 Happy Birthday! 🎂</h1>
+      <p id="subtitle">Jump over the obstacles (Press Space or click)</p>
+      <div id="score-display">Score: 0</div>
+      <canvas id="gameCanvas" width="800" height="400"></canvas>
+      <div id="game-over-screen" class="hidden">
+        <h2>Game Over</h2>
+        <p>Final Score: <span id="final-score">0</span></p>
+        <button id="restart-btn">Try Again</button>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

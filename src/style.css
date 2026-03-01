@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+:root {
+  --bg-color: #1a1a2e;
+  --text-color: #e94560;
+  --canvas-bg: #16213e;
+  --canvas-border: #0f3460;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--bg-color);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  user-select: none;
+}
+
+#game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+}
+
+#title {
+  color: var(--text-color);
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: float 3s ease-in-out infinite;
+}
+
+#subtitle {
+  color: #a0a0a0;
+  font-size: 1.1rem;
+}
+
+#score-display {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+canvas {
+  background-color: var(--canvas-bg);
+  border: 4px solid var(--canvas-border);
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+#game-over-screen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(26, 26, 46, 0.95);
+  padding: 40px;
+  border-radius: 12px;
+  border: 2px solid var(--text-color);
+  text-align: center;
+  box-shadow: 0 0 40px rgba(233, 69, 96, 0.3);
+}
+
+#game-over-screen.hidden {
+  display: none;
+}
+
+#game-over-screen h2 {
+  color: var(--text-color);
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+#game-over-screen p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+#restart-btn {
+  background-color: var(--text-color);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+#restart-btn:hover {
+  background-color: #ff5e7e;
+  transform: scale(1.05);
+}
+
+#restart-btn:active {
+  transform: scale(0.95);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
